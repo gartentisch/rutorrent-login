@@ -3,8 +3,12 @@ plugin.loadLang();
 
 plugin.onLangLoaded = function()
 {
+	
+    logout=function() {
+        window.location = "plugins/login/logout.php?return="+encodeURIComponent(document.location.href)
+    }
     var before = (theWebUI.systemInfo.rTorrent.started ? "add" : "settings");
-    this.addButtonToToolbar("logoff", theUILang.loginOut + " (" + plugin.me + ")", "theDialogManager.show('loginDlg')", before);
+    this.addButtonToToolbar("logoff", theUILang.loginOut + " (" + plugin.me + ")", "logout()", before);
     this.addSeparatorToToolbar(before);
     loginDlg = ""+
 		"<form id=\"loginForm\" method=\"POST\" action=\"plugins/login/auth.php?return="+encodeURIComponent(document.location.href)+"\"><div id=\"loginDlg-content\" class'fxcaret'>"+
@@ -33,7 +37,7 @@ plugin.onLangLoaded = function()
 			$$('login.username').focus();
 		}, 100);
 	});     
-    if (!plugin.me)
+    if (!plugin.me || plugin.me=="user")
        theDialogManager.show("loginDlg");
 }
 
