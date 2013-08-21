@@ -1,5 +1,6 @@
 <?
 require_once("conf.php");
+session_name("rutorrent");
 session_start();
 $uname = $_POST['login_username'];
 $upass = $_POST['login_password'];
