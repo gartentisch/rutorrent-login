@@ -1,12 +1,12 @@
 Multiuser login for ruTorrent
 =============================
 
-This plugin enchances ruTorrent with cookie-based form-login multi user support.
+This plugin enhances ruTorrent with cookie-based form-login multi user support.
 
 Setting up
 ==========
 
-This setup has been tested only with apache, however it should be pretty universal as long
+This setup has been tested only with apache and nginx, however it should be pretty universal as long
 you have working installation of PHP with _SESSION[] support.
 
 RPC
