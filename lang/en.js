@@ -5,3 +5,4 @@ theUILang.loginPassword     = "Password";
 theUILang.loginButton        = "Login";
 
 thePlugins.get("login").langLoaded();
+;

@@ -47,3 +47,5 @@ plugin.onRemove = function()
     this.removeSeparatorFromToolbar(theWebUI.systemInfo.rTorrent.started ? "add" : "settings");
     this.removeButtonFromToolbar("logoff");
 }
+);
+};
