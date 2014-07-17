@@ -29,7 +29,7 @@ Second, we need to direct the SCGI/RPC plugin at proper RPC socket based on who'
      if(isset($_SESSION['login']))
      {
        $ruser=$_SERVER['DOCUMENT_ROOT']?$_SESSION['login']:$_SERVER['argv'][1];
-       $scgi_host = "unix:////home/".$ruser."/.rtorrent.rpc";
+       $scgi_host = "unix:///home/".$ruser."/.rtorrent.rpc";
        $_SERVER['REMOTE_USER']=$_SERVER['PHP_AUTH_USER']=$ruser;
      }
 
