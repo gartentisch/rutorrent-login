@@ -1,4 +1,4 @@
-<?
+<?php
 require_once("conf.php");
 session_name("rutorrent");
 session_start();
